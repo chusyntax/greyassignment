@@ -1,5 +1,9 @@
 /* Navbar CSS*/
+body{
 
+max-width:100%;
+
+}
 *{transition:all 0.3s ease-in-out;}
 
 .navCon{
@@ -12,6 +16,7 @@
 
 nav{
   float:right;
+  max-width: 100%;
 
 }
 
@@ -21,7 +26,7 @@ nav{
 
 ul li{
   display: inline-block; padding:20px;
-  font-size:20px; 
+  font-size:15px; 
   font-family:Helvetica, sans-serif;
   text-transform: uppercase;
 }
@@ -36,8 +41,8 @@ ul li:hover{
 height:90vh;
   display:grid;
   grid-template-columns: 1fr 2fr;
-  padding:100px;
-  grid-gap: 100px;
+  padding:200px 200px 0px 200px;
+  grid-gap: 80px;
 }
 .hero_img{
  padding-top:10px;
@@ -58,11 +63,13 @@ height:90vh;
 
 .hero_button:hover{
   cursor: pointer;
+  background:#15748f;
+  transform: scale(1.05);
 }
 
 .hero_text h1{
   font-family:Helvetica, sans-serif;
-  font-size:50px;
+  font-size:45px;
   font-weight: 300;
   width:600px;
 }
@@ -70,7 +77,7 @@ height:90vh;
 .hero_text h3{
   font-family:Helvetica, sans-serif;
   font-weight: 200;
-  font-size:17px;
+  font-size:15px;
 }
 
 /*Capital*/
@@ -84,7 +91,7 @@ height:90vh;
 
 .capital h1{
   text-transform: uppercase;
-  font-size: 80px;
+  font-size: 65px;
 font-weight:300;
   text-align: left;
   font-family:Helvetica;
@@ -100,7 +107,7 @@ font-weight:300;
 
 .capital_grid p{
   width:90%;
-  font-size:20px;
+  font-size:17px;
   text-align: left;
 letter-spacing: 0px;
 color: #091432;
@@ -108,25 +115,89 @@ color: #091432;
 
 
 /*grey section*/
+
+.grey_section{
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .grey_section img{
 
 padding-left:50px;
 
 }
 
-.grey_section h4{
+.grey_block{
+position:relative;
+  width:80%;
+  height:600px;
+  padding-top:80px;
+  background: #f2f2f2;
+  border-radius: 15px;
+}
+
+.grey_block .text1{
+  position:absolute;
+  padding-left:70px;
+  right:0;
+  top:0;
+  
+  padding-bottom:100px;
+}
+
+.grey_block .text2{
+  position:absolute;
+  bottom:0;
+  padding:20px;
+}
+
+.grey_block .text2 h1{
+  font-size: 45px;
+  max-width: 60%;
+  font-family:Helvetica;
+  text-transform: uppercase;
+}
+
+.grey_block .text1 h1{
+  font-size: 50px;
+  font-family:Helvetica;
+  text-transform: uppercase;
+}
+
+.grey_block .text1 p{
+  color: #AAAAAA;
+}
+.grey_block .text2 p{
+  color: #AAAAAA;
+}
+
+.up_arrow{
+  position: absolute;
+  left:600px;
+}
+
+ h4{
   display: flex;
   align-items: center;
   justify-content:center;
 text-align: center;
 padding-left:300px;
  width:60%;
-  font-size: 20px;
+  font-size: 15px;
 font-weight:700;
   font-family:Helvetica;
   letter-spacing: 0px;
   color:#091432;
 
+}
+
+.bar{
+
+ width:1000px;
+ height:30px;
+background: #CDCED1;
+transform: rotate(-15deg);
 }
 
 
@@ -179,6 +250,7 @@ color:white;
 /*Arrow*/
 
 .arrow{
+  max-width: 100%;
   display:flex;
   align-items: center;
   justify-content: center;
@@ -207,7 +279,7 @@ justify-content: center;
 
 .team_div h1{
   text-transform: uppercase;
-  font-size: 70px;
+  font-size: 60px;
 font-weight:300;
 padding-left:150px;
   font-family:Helvetica;
@@ -221,15 +293,16 @@ padding-left:150px;
 
 .team_text h2{
   text-align: start;
-  font-size: 65px;
+  font-size: 50px;
   font-weight:100;
   font-family:Helvetica;
+  max-width: 90%;
   letter-spacing: 0px;
 }
 
 .team_text p{
   font-family:Helvetica;
-  font-size: 24px;
+  font-size: 18px;
   width:85%;
   padding:5px 0px 50px 0px;
 }
@@ -255,7 +328,7 @@ padding-left:150px;
 .ceo_text h1{
 
   text-align: start;
-  font-size: 60px;
+  font-size: 50px;
   font-weight:100;
   font-family:Helvetica;
   letter-spacing: 0px;
@@ -264,7 +337,7 @@ padding-left:150px;
 .ceo_text p{
 
 text-align: start;
-font-size: 20px;
+font-size: 18px;
 font-weight:100;
 font-family:Helvetica;
 width:68%;
@@ -291,10 +364,52 @@ footer img{
   float:right;
 }
 
-.logos ul li img{
+.logos ul li svg{
   display: inline-block; padding:2px;
-width:50px;
-height:50px;
+width:40px;
+height:40px;
 text-align: end;
 
+}
+
+
+
+/*Media Queries*/
+
+@media screen and (max-width:700px) {
+ 
+  .hero{
+
+    display:grid;
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .hero_img{
+padding:0;
+  }
+
+  .hero_text{
+    padding:0;
+  }
+
+  .capital_grid{
+    display:grid;
+    grid-template-columns: 1fr;
+  
+  }
+
+  .grey_grid{
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .team{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .cero_section{
+    grid-template-columns: 1fr;
+  }
 }
